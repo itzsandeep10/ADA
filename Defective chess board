@@ -50,14 +50,16 @@ int main()
     int n,drow,dcol,i,j;
     printf("Enter the size\n");
     scanf("%d", &n);
-    printf("Enter the defective row and column\n");
-    scanf("%d %d", &drow, &dcol);
+    printf("Enter the defective row:\n");
+    scanf("%d", &drow);
+    printf("Enter the defective column\n");
+    scanf("%d", &dcol);
     tiling_board(0,0,drow,dcol,n);
     for(i=0;i<n;i++)
     {
         for(j=0;j<n;j++)
         {
-            printf("%d ", board[i][j]);
+            printf("%d\t", board[i][j]);
         }
         printf("\n");
     }
